@@ -4,6 +4,9 @@ package entities;
  *
  * @author Eduardo
  */
-public class Plano {
+public class Plano 
+{
+    String nome;
+    float valor;
     
 }
