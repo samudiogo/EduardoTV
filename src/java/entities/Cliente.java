@@ -14,6 +14,13 @@ public class Cliente {
     public List<String> getNomeSeparado(){
         return Arrays.asList(nome.split("\\s"));
     }
+    
+    public String getNomeConcatenado(List<String> nomeSeparado){
+        StringBuilder sb = new StringBuilder();
+        for(String n: nomeSeparado)
+            sb.append(n).append(" ");
+        return sb.toString().trim();
+    }
             
     
 }
