@@ -5,6 +5,8 @@ package entities;
  *
  * @author Eduardo
  */
-public class Canal {
-    
+public class Canal 
+{
+    int numeroCanal;
+    String descriçãoCanal;
 }

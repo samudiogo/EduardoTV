@@ -5,6 +5,9 @@ package entities;
  *
  * @author Eduardo
  */
-public class Programa {
+public class Programa 
+{
+    String canal;
+    String descricao;
     
 }
