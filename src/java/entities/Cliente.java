@@ -12,9 +12,15 @@ public class Cliente {
     private String nome;
     private String nomeDoMeio;
     private String sobreNome;
+    private String cpf;
 
     public Cliente(String nomeCompleto) {
         setNomeCompleto(nomeCompleto);
+    }
+
+    public Cliente(String nomeCompleto, String cpf) {
+        setNomeCompleto(nomeCompleto);
+        setCpf(cpf);
     }
 
     private void setNomeCompleto(String nomeCompleto) {
@@ -22,19 +28,22 @@ public class Cliente {
 
         int tnome = nomeLista.size();
         nome = nomeLista.get(0);
-        sobreNome = nomeLista.get(tnome - 1);
-
         nomeDoMeio = "";
-        for (int i = 1; i < tnome - 1; ++i) {
-            nomeDoMeio += String.format("%s ", nomeLista.get(i));
-        }
+        sobreNome = "";
+        if (tnome > 1) {
 
+            sobreNome = nomeLista.get(tnome - 1);
+
+            for (int i = 1; i < tnome - 1; ++i) {
+                nomeDoMeio += String.format("%s ", nomeLista.get(i));
+            }
+        }
         nomeDoMeio = nomeDoMeio.trim();
 
     }
 
     private List<String> getNomeSeparado(String nomeCompleto) {
-        return Arrays.asList(nome.split("\\s"));
+        return Arrays.asList(nomeCompleto.split("\\s"));
     }
 
     public String getNomeCompleto() {
@@ -45,6 +54,20 @@ public class Cliente {
                 .append(" ")
                 .append(sobreNome);
         return sb.toString().trim();
+    }
+
+    /**
+     * @return the cpf
+     */
+    public String getCpf() {
+        return cpf;
+    }
+
+    /**
+     * @param cpf the cpf to set
+     */
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
 }

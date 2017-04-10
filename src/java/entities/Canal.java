@@ -1,40 +1,31 @@
 
 package entities;
 
-/**
- *
- * @author Eduardo
- */
 public class Canal 
 {
+    Canal[] canal = new Canal[100];
+    
     private int numeroCanal;
-    private String descriçãoCanal;
+    private String descricaoCanal;
+    //todo canal tem uma serie de programas
+    Programa[] programas = new Programa[100];
 
-    /**
-     * @return the numeroCanal
-     */
+   
     public int getNumeroCanal() {
         return numeroCanal;
-    }
+}
 
-    /**
-     * @param numeroCanal the numeroCanal to set
-     */
+   
     public void setNumeroCanal(int numeroCanal) {
         this.numeroCanal = numeroCanal;
     }
 
-    /**
-     * @return the descriçãoCanal
-     */
-    public String getDescriçãoCanal() {
-        return descriçãoCanal;
+    
+    public String getDescricaoCanal() {
+        return descricaoCanal;
     }
 
-    /**
-     * @param descriçãoCanal the descriçãoCanal to set
-     */
-    public void setDescriçãoCanal(String descriçãoCanal) {
-        this.descriçãoCanal = descriçãoCanal;
+    public void setDescricaoCanal(String descricaoCanal) {
+        this.descricaoCanal = descricaoCanal;
     }
 }
